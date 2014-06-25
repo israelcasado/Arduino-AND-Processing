@@ -1,4 +1,4 @@
-arduino-y-processing
+arduino AND processing
 ====================
 
 ARDUINO AND PROCESSING 
