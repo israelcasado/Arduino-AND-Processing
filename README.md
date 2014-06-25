@@ -1,6 +1,4 @@
-arduino AND processing
+Arduino AND Processing
 ====================
-
-ARDUINO AND PROCESSING 
 
 INTENTO DE INTERACTUAR ARDUINO CON PROCESSING REMOTAMENTE VIA WEB
