@@ -1,44 +1,33 @@
-// led RGB Ywrobot.ino
+// Funcionamiento de leds RGB Ywrobot.ino
 
 int luzRoja = 11;
 int luzVerde = 5;
 int luzAzul = 3;
-int tiempo = 3000;
-char valor;
-int encendido = 13;
+int tiempo1 = 4000; // Tiempo color rojo y verde
+int tiempo2 = 1500; // Tiempo color amarillo
+
 
 void setup() {
 
 	pinMode(luzRoja, OUTPUT);
 	pinMode(luzAzul, OUTPUT);
 	pinMode(luzVerde, OUTPUT);
-	pinMode(encendido, OUTPUT);
 
 	Serial.begin(9600);
-	
+
 }
 
 void loop() {
-	valor = Serial.read();
 
-	colores(0, 255, 255); // color rojo
+	colores(255, 255, 0); // color verde
 	Serial.write(1);
-	Serial.read();
-	delay(tiempo);
-	colores(255, 0, 255); // color verde
+	delay(tiempo1);
+	colores(0, 255, 0); // color amarillo
 	Serial.write(2);
-	delay(tiempo);
-	colores(255, 255, 0); // color azul
+	delay(tiempo2);
+	colores(0, 255, 255); // color rojo
 	Serial.write(3);
-	delay(tiempo);
-
-	if (valor == 'A'){
-		digitalWrite(13, HIGH);
-	} 
-	if (valor == 20){
-		digitalWrite(13, LOW);
-	} 
-	
+	delay(tiempo1);
 
 }
 
@@ -47,4 +36,3 @@ void colores(int rojo, int verde, int azul){
 	analogWrite(luzVerde, verde);
 	analogWrite(luzAzul, azul);
 }
-
