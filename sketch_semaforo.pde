@@ -15,7 +15,7 @@ void setup() {
 
   // You may need to change the number in [ ] to match 
   // the correct port for your system
-  myPort = new Serial(this, Serial.list()[2], 9600);
+  myPort = new Serial(this, Serial.list()[3], 9600);
 }
   void draw() {
 
@@ -29,13 +29,12 @@ void setup() {
   
     void luces() {
   if (Datos == valor1) {
-    background(255, 0, 0);
+    background(50, 200, 0);
   } 
   if (Datos == valor2) {
-    background(0, 255, 0);
+    background(255, 255, 0);
   } 
   if (Datos == valor3) {
-    background(0, 0, 255);
+    background(255, 0, 0);
   } 
     }
-
