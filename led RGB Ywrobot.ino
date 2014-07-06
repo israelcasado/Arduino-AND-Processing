@@ -1,4 +1,6 @@
 // Funcionamiento de leds RGB Ywrobot.ino
+// www.israelcasado.com - @israc
+
 
 int luzRoja = 11;
 int luzVerde = 5;
